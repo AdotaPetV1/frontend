@@ -18,16 +18,22 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 
 /* Components */
 import { LogInComponent } from './components/log-in/log-in.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterOngComponent } from './components/register-ong/register-ong.component';
+import { HomeComponent } from './components/home/home.component';
+import { RegisterSelectComponent } from './components/register-select/register-select.component';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInComponent,
-    RegisterComponent,
-    RegisterComponent,
-    LogInComponent
+    RegisterOngComponent,
+    RegisterOngComponent,
+    LogInComponent,
+    HomeComponent,
+    RegisterSelectComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,
