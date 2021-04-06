@@ -22,6 +22,13 @@ import { RegisterOngComponent } from './components/register-ong/register-ong.com
 import { HomeComponent } from './components/home/home.component';
 import { RegisterSelectComponent } from './components/register-select/register-select.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { EditOngComponent } from './components/edit-ong/edit-ong.component';
+import { RegisterSenhaComponent } from './components/register-senha/register-senha.component';
+import { ForgotSenhaEmailComponent } from './components/forgot-senha-email/forgot-senha-email.component';
+import { ForgotSenhaCodigoComponent } from './components/forgot-senha-codigo/forgot-senha-codigo.component';
+import { ForgotSenhaNovaSenhaComponent } from './components/forgot-senha-nova-senha/forgot-senha-nova-senha.component';
+import { RegisterSenhaOngComponent } from './components/register-senha-ong/register-senha-ong.component';
 
 
 @NgModule({
@@ -33,7 +40,14 @@ import { RegisterUserComponent } from './components/register-user/register-user.
     LogInComponent,
     HomeComponent,
     RegisterSelectComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    EditUserComponent,
+    EditOngComponent,
+    RegisterSenhaComponent,
+    ForgotSenhaEmailComponent,
+    ForgotSenhaCodigoComponent,
+    ForgotSenhaNovaSenhaComponent,
+    RegisterSenhaOngComponent
   ],
   imports: [
     BrowserModule,

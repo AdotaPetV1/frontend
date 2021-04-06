@@ -192,3 +192,23 @@ body {
   font-weight: bold;
   font-size: 28px;
 }
+.forgot-box {
+  
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 30%;
+  margin-top: 9%;  
+}
+.forgot-box .mat-card-content  {
+  margin-top: 7%;
+  margin-bottom: 10%; 
+}
