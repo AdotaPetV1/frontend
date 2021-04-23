@@ -1,24 +1,20 @@
 <div class="wrapper" fxLayout="row" fxLayoutAlign="center center">
   <mat-card class="cadastro-box">
-    
     <mat-card-header>
-      <img class="logo" src="assets/image/logo2.png" alt="login-logo">
+      <img class="logo" src="assets/image/logo2.png" mat-card-image style="max-width: 50%; max-height: 50%;">
     </mat-card-header>
      <div >
        <p class="title">
          Cadastro
        </p>
-     </div>
-      <div class="button">
-        <nav>
-        <button mat-stroked-button class="btn-block" (click)="goToOng()" >Ongs</button>
-        
-        </nav>
       </div>
-      <div>
-        <button mat-stroked-button color="basic" class="btn-block" (click)="goToUser()" >Usuário</button>
-      </div>
-
+      <div class="button"> 
+        <button mat-stroked-button class="btn-block-ongs" (click)="goToOng()" style="float: inline-start;" >
+          <img src="/assets/image/ongs.jpeg" > 
+        </button>
+        <button mat-stroked-button class="btn-block-user" (click)="goToUser()" style="float: inline-end;" >
+          <img src="/assets/image/user.jpeg" >
+        </button>
+      </div> 
     </mat-card>
-
 </div>
