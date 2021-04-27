@@ -93,6 +93,7 @@ body {
 .wrapper .field-full-width,
 .wrapper .btn-block {
   width: 100%;
+  border-radius: 20px;
 }
 .wrapper .btn-block-ongs{
   border: none;
@@ -133,6 +134,7 @@ body {
   line-height: 54px;
   background: #fff;
   margin-bottom: 25px;
+  border-radius: 20px;
 }
 .wrapper .button .btn-block-user {
   border: 2px solid currentColor;
@@ -140,6 +142,7 @@ body {
   line-height: 54px;
   background: #fff;
   margin-bottom: 25px;
+  border-radius: 20px;
 }
 .wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0.8375em 0;
@@ -235,7 +238,6 @@ body {
   margin-top: 7%;
   margin-bottom: 10%; 
 }
-
 .cat-box {
   top: 0;
   opacity: 1;
@@ -250,17 +252,20 @@ body {
   z-index: 5; 
   margin-top: 5%;
 }
-
+.wrapper .field-register{
+width: 100%;
+margin-bottom: -0.5em;
+}
 .card3 .card3 {
   width: 100%;
   height: 100%;
 }
-
 .wrapper .button1 {
   margin: 0 auto;
   width: 30%;
   padding: 10px 24px;
   margin-left: 10%; 
+  border-radius: 15px;
 }
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
@@ -282,13 +287,11 @@ mat-sidenav {
 .sidenav-box {
   margin-top: 5%;
   width: 100%;
-  height: 55%;  
-  
+  height: 55%; 
 }
 .home-sidenav-box-title {
   margin-top: 10%;
-  margin-left: 21%;
-  
+  margin-left: 21%; 
 }
 mat-card-header .logo {
   margin-top: 30%;
@@ -297,6 +300,7 @@ mat-card-actions .sidenav-button {
   background-color: #A9CB73;
   width: 80%;
   height: 10%;
+  border-radius: 15px;
   
   
 }
@@ -329,4 +333,250 @@ mat-toolbar .toolbar-button {
   border: none;
   padding: 11px 11px; 
 }
+.mat-card-subtitle{
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 80%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5; 
+  max-width: 76%;
+  height: 25%;
+  margin-left: 12%;
+
+}
+body {
+  width: 100%;
+  margin: auto;
+  font-family: sans-serif;
+  line-height: 2;
+  background-color:  #e7e4e4;
+  color: #696969;
+}
+
+.wrapper .titulo {
+  font-size: 30px;
+  padding: 30px;
+  color: #00308f;
+  text-align: center;
+  width: 100%;
+}
+
+main {
+  background: #e7e4e4;
+  width: 100%;
+}
+.img1 {
+  text-align: center;
+  padding: 2%;
+  width: 100%;
+}
+.wrapper .home-cg1{
+  width: 100%;
+}
+.paragrafo {
+  padding: 20px;
+  font-size: 19px;
+  color: #000000;
+  width: 100%;
+}
+
+.col-3 {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  position: relative; 
+  background-color: #A9CB73;
+}
+
+.wrapper .bloco-scrum {
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 15.5%;
+  border: 4px solid #000000;
+  margin-top: 100px;
+  background-color: #A9CB73;
+}
+.wrapper .home-lucas {
+  padding: 9px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+}
+.bloco-imagem img {
+  margin: 4 auto;
+  width: 100%;
+  height: auto;
+}
+.bloco-imagem {
+  height: 320px;
+  border: 3px solid #000000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 9px;
+  width: 26%;
+}
+.bloco-imagem b,
+p {
+  text-align: center;
+}
+.bloco-texto {
+  margin-top: 2em;
+}
+
+h3 {
+  font-weight: normal !important;
+}
+
+.bloco-imagens-texto {
+  background-color: #e4e4e4;
+  width: 97%;
+}
+.bloco-imagens-texto:before {
+  width: 100%;
+  display: inline-block;
+  content: "";
+  height: 20px;
+}
+.bloco-imagens-texto:after {
+  width: 100%;
+  display: inline-block;
+  content: "";
+  height: 70px;
+}
+.Cg10 {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+}
+.Cg102 {
+  color: #000000;
+  font-size: 18px;
+}
+.Fabricio1 {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+}
+.Fabricio2 {
+  color: #000000;
+  font-size: 18px;
+}
+.Douglas1 {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+}
+.Douglas2 {
+  color: #000000;
+  font-size: 18px;
+}
+.Damaris1 {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+}
+.Damaris2 {
+  color: #000000;
+  font-size: 18px;
+}
+.Mariana1 {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+}
+.Mariana2 {
+  color: #000000;
+  font-size: 18px;
+}
+.Sunner1 {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+}
+.Sunner2 {
+  color: #000000;
+  font-size: 18px;
+}
+.Fabiana1 {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+}
+.Fabiana2 {
+  color: #000000;
+  font-size: 18px;
+}
+.bloco-scrum .Lucas1 {
+  color: #000000;
+  font-size: 27px;
+  text-align: center;
+}
+.bloco-scrum .Lucas2 {
+  color: #000000;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.footer-2 {
+  color: #000000;
+  height: 100px;
+  background:  #a9cb73;
+  width: 100%;
+}
+
+.footer-2 p {
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+}
+.wrapper .dev {
+  margin-top: 7%;
+  font-size: 50px;
+  color: #00308f;
+  text-align: center;
+}
+.wrapper-center .home-cg3{
+ margin-top: 1%;
+ width: 45%;
+ object-fit: cover;
+}
+.wrapper-center{
+  margin-top: 2%;
+  text-align: center;
+  background: #e4e4e4;
+  width: 100%;
+  height: 800px;
+}
+.wrapper-center .subtitulo2{
+  padding-top: 3%;
+}
+.wrapper-center .titulo-azul{
+  padding-top: 1%;
+  color: #00308f;
+  font-size: 40px;
+  
+}
+.wrapper-center .subtitulo{
+  color: #000000;
+  text-align: center;
+  font-size: 17px;
+}
+.home-cg2{
+  width: 100%;
+}
+.home-cg3{
+  text-align: center;
+  width: 100%;
+}
+
+
 
