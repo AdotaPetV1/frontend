@@ -54,7 +54,12 @@ body {
   -ms-transform: scale(1);
   z-index: 5;
   max-width: 30%;
+<<<<<<< HEAD
   margin-top: 10%;
+=======
+  margin-top: 5%;
+  
+>>>>>>> bfb85f8398e4c7217f131500f5708a5512efc3e9
 }
 
 .box.back {
@@ -91,7 +96,17 @@ body {
 .wrapper .btn-block {
   width: 100%;
 }
+.wrapper .btn-block-ongs{
+  border: none;
+  padding: 11px 11px;
+  
+}
+.wrapper .btn-block-user{
 
+  border: none;
+  padding: 11px 11px;
+  
+} 
 .wrapper mat-card-header {
   text-align: center;
   width: 100%;
@@ -109,12 +124,25 @@ body {
 }
 
 .wrapper .mat-stroked-button {
-  border: 1px solid currentColor;
+  border: none;
   line-height: 54px;
   background: #a9cb73;
   margin-bottom: 25px;
 }
-
+.wrapper .button .btn-block-ongs {
+  border: 2px solid currentColor;
+  border-color: #A9CB73;
+  line-height: 54px;
+  background: #fff;
+  margin-bottom: 25px;
+}
+.wrapper .button .btn-block-user {
+  border: 2px solid currentColor;
+  border-color: #A9CB73;
+  line-height: 54px;
+  background: #fff;
+  margin-bottom: 25px;
+}
 .wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0.8375em 0;
 }
@@ -146,8 +174,8 @@ body {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   z-index: 5;
-  max-width: 30%;
-  margin-top: 10%;
+  max-width: 29%;
+  margin-top: 5%;
 }
 .cadastro-box .title {
   text-align: center;
@@ -395,6 +423,7 @@ h3 {
   color: #00308f;
   text-align: center;
 }
+<<<<<<< HEAD
 .wrapper-center .home-cg3{
  margin-top: 1%;
  width: 45%;
@@ -428,3 +457,100 @@ h3 {
   text-align: center;
   width: 100%;
 }
+=======
+
+.cat-box {
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 80%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5; 
+  margin-top: 5%;
+}
+
+.card3 .card3 {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .button1 {
+  margin: 0 auto;
+  width: 30%;
+  padding: 10px 24px;
+  margin-left: 10%; 
+}
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+mat-sidenav {
+    width: 280px;
+    padding:15px;
+}
+.mat-drawer { 
+    background-color: #fff;
+    border-width: 0.25rem;
+    border-color: #A9CB73;
+}
+.main-content {
+    padding:20px;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+.sidenav-box {
+  margin-top: 5%;
+  width: 100%;
+  height: 55%;  
+  
+}
+.home-sidenav-box-title {
+  margin-top: 10%;
+  margin-left: 21%;
+  
+}
+mat-card-header .logo {
+  margin-top: 30%;
+}
+mat-card-actions .sidenav-button {
+  background-color: #A9CB73;
+  width: 80%;
+  height: 10%;
+  
+  
+}
+mat-sidenav-content {
+  
+  background-color: #D2D0D0;
+  
+}
+.home-title {
+  margin-top: 7%;
+  margin-left: 33%;
+  
+}
+mat-sidenav-content .home-principal-box-title {
+  margin-top: 1%;
+  margin-left: 2%;
+  background-color: #DEDEDE;
+  width: 12%;
+}
+mat-sidenav-content .home-principal-box {
+  margin-top: 1%;
+  margin-left: 2%;
+  background-color: #DEDEDE;
+  max-width: 95%;
+}
+mat-sidenav-content .home-principal-grid {
+  background-color: #fff;
+}
+mat-toolbar .toolbar-button {  
+  border: none;
+  padding: 11px 11px; 
+}
+
+>>>>>>> bfb85f8398e4c7217f131500f5708a5512efc3e9

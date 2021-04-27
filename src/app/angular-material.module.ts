@@ -32,6 +32,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 
 const materialModules = [
@@ -75,7 +77,9 @@ const materialModules = [
     ...materialModules
   ],
   exports: [
-    ...materialModules
+    ...materialModules,
+    MatSidenavModule,
+  	MatToolbarModule
   ],
 })
 

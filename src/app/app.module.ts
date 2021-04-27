@@ -29,6 +29,10 @@ import { ForgotSenhaEmailComponent } from './components/forgot-senha-email/forgo
 import { ForgotSenhaCodigoComponent } from './components/forgot-senha-codigo/forgot-senha-codigo.component';
 import { ForgotSenhaNovaSenhaComponent } from './components/forgot-senha-nova-senha/forgot-senha-nova-senha.component';
 import { RegisterSenhaOngComponent } from './components/register-senha-ong/register-senha-ong.component';
+import { RegisterDogComponent } from './components/register-dog/register-dog.component';
+import { RegisterCatComponent } from './components/register-cat/register-cat.component';
+import { HomePrincipalComponent } from './components/home-principal/home-principal.component';
+
 
 
 @NgModule({
@@ -47,7 +51,10 @@ import { RegisterSenhaOngComponent } from './components/register-senha-ong/regis
     ForgotSenhaEmailComponent,
     ForgotSenhaCodigoComponent,
     ForgotSenhaNovaSenhaComponent,
-    RegisterSenhaOngComponent
+    RegisterSenhaOngComponent,
+    RegisterDogComponent,
+    RegisterCatComponent,
+    HomePrincipalComponent
   ],
   imports: [
     BrowserModule,

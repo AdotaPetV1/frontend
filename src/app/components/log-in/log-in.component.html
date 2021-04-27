@@ -1,36 +1,28 @@
 <div class="wrapper" fxLayout="row" fxLayoutAlign="center center">
   <mat-card class="box">
-    
     <mat-card-header>
-      <img class="logo" src="assets/image/logo2.png" alt="login-logo">
+      <img class="logo" src="assets/image/logo2.png" mat-card-image style="max-width: 50%; max-height: 50%;">
     </mat-card-header>
-
   <form class="form">
     <mat-card-content>
       <mat-form-field class="field-full-width">
         <input matInput placeholder="E-mail">
       </mat-form-field>
-
       <mat-form-field class="field-full-width">
-          <input matInput placeholder="Senha">
+        <input matInput placeholder="Senha">
       </mat-form-field>
-
       <section class="login-section">
         <mat-radio-group >
           <mat-radio-button class="Login-margin" value="after" >Salvar senha</mat-radio-button>
             <a style="margin: 0 15px"  href="/esqueceu-senha-email">Esqueceu sua Senha?</a>
         </mat-radio-group>
       </section>
-
     </mat-card-content>
       <button mat-stroked-button color="basic" class="btn-block">Login</button>
-
     <div>
       <p>Não possui conta?
-      <a style="margin: 0 15px" href= "/cadastro">Registre-se agora</a></p>
+      <a style="margin: 0 15px" href= "url">Registre-se agora</a></p>
     </div>
-
   </form>
   </mat-card>
-
 </div>

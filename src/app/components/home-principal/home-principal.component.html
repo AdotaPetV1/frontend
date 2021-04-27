@@ -1,0 +1,73 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav mode="side" #sidenav opened position="start">
+    <mat-card-header>
+      <img class="logo" src="assets/image/logo2.png" mat-card-image style="max-width: 75%; max-height: 80%;">
+    </mat-card-header>
+    <div class="home-sidenav-box-title">
+      <mat-card-title>Bem vindo</mat-card-title>
+    </div>
+    <mat-card class="sidenav-box">
+      <mat-card-actions>
+        <button mat-stroked-button class="sidenav-button" (click)="goToLogin()" >Entrar</button> 
+      </mat-card-actions>
+      <mat-card-actions>
+      <button mat-stroked-button class="sidenav-button" (click)="goToRegistertSelect()" >Criar Conta</button> 
+    </mat-card-actions>
+    <mat-card-actions>
+      <button mat-stroked-button class="sidenav-button">Doações</button> 
+    </mat-card-actions>
+    <mat-card-actions>
+      <button mat-stroked-button class="sidenav-button" >Contribuições</button> 
+    </mat-card-actions>
+  </mat-card> 
+  </mat-sidenav> 
+  <mat-sidenav-content class="sidenav-content">
+    <div>
+  <div class="home-title">
+      <mat-card-title>Adote agora e faça uma bolinha de pelo feliz</mat-card-title>
+  </div>
+    <mat-card class="home-principal-box-title">
+      <mat-card-title>Adota Dog</mat-card-title>
+    </mat-card>
+    <mat-card class="home-principal-box">
+      <div fxLayout="row" fxLayoutAlign="start center" style="margin: 2%;" >
+        <div style="margin: 0.5%;">
+          <mat-card class="home-principal-grid"
+          fxFlex = "0 1 calc(25% - 11px)"
+          xFlex.1t-md= "0 1 calc(50% - 11px)"
+          xFlex.1t-sm = "100%">
+            <mat-card-header>
+              <div mat-card-avatar class="home-principal-image"></div>
+              <mat-card-title>Kamui</mat-card-title>
+            </mat-card-header>
+              <img mat-card-image src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt="Photo of a Shiba Inu">
+            </mat-card>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div>
+    <mat-card class="home-principal-box-title">
+      <mat-card-title>Adota Cat</mat-card-title>
+    </mat-card>
+    <mat-card class="home-principal-box">
+      <div fxLayout="row" fxLayoutAlign="start center" style="margin: 2%;" >
+        <div style="margin: 0.5%;">
+          <mat-card class="home-principal-grid"
+          fxFlex = "0 1 calc(25% - 11px)"
+          xFlex.1t-md= "0 1 calc(50% - 11px)"
+          xFlex.1t-sm = "100%">
+            <mat-card-header>
+              <div mat-card-avatar class="home-principal-image"></div>
+              <mat-card-title>Joca</mat-card-title>
+            </mat-card-header>
+              <img mat-card-image src="http://cdn.shopify.com/s/files/1/2059/0807/products/cat-sunglasses-1_1200x1200.jpg?v=1571438982" alt="Photo of a Shiba Inu">
+          </mat-card>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
