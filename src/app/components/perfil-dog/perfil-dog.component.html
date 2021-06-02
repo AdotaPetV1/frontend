@@ -1,1 +1,62 @@
-<p>perfil-dog works!</p>
+<div class="wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="cat-box">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-card class="card1">
+      <img mat-card-image src="assets/image/cinza.png"  >
+    </mat-card>
+    </mat-grid-tile>
+  
+  <mat-grid-tile class="dados"  [colspan]=1 [rowspan]=2>
+      <mat-card class="card2"  style="height: 100%; margin-top: 5%;">
+      <mat-card-content>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Nome">
+        </mat-form-field>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Porte">
+        </mat-form-field>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Idade">
+        </mat-form-field>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Sexo">
+        </mat-form-field>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Castração">
+        </mat-form-field>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Vacinação">
+        </mat-form-field>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Raça">
+        </mat-form-field>
+        <mat-form-field class="field-register">
+          <input matInput placeholder="Limitações">
+        </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile class="card3">
+    <mat-card class="card3">
+      <mat-form-field class="field-full-width"style="max-width: 100%;">
+        <mat-label >Descrição</mat-label>
+        <textarea matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="15"> ></textarea>
+      </mat-form-field>
+    </mat-card>
+  </mat-grid-tile>
+  </mat-grid-list>
+  <div class="button">
+    <div  >
+      <button mat-stroked-button color="basic" class="button1">Cadastrar</button>
+    </div>
+  </div>
+  </mat-card>
+  
+  </div>
+  <mat-card-subtitle>Para Adotar entre em contato com...</mat-card-subtitle>
+

@@ -32,6 +32,9 @@ import { RegisterSenhaOngComponent } from './components/register-senha-ong/regis
 import { RegisterDogComponent } from './components/register-dog/register-dog.component';
 import { RegisterCatComponent } from './components/register-cat/register-cat.component';
 import { HomePrincipalComponent } from './components/home-principal/home-principal.component';
+import { HomeAuthenticateComponent } from './components/home-authenticate/home-authenticate.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -54,7 +57,8 @@ import { HomePrincipalComponent } from './components/home-principal/home-princip
     RegisterSenhaOngComponent,
     RegisterDogComponent,
     RegisterCatComponent,
-    HomePrincipalComponent
+    HomePrincipalComponent,
+    HomeAuthenticateComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,8 @@ import { HomePrincipalComponent } from './components/home-principal/home-princip
     AngularMaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

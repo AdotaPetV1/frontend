@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { HomePrincipalComponent } from './components/home-principal/home-principal.component';
+import { HomeAuthenticateComponent } from './components/home-authenticate/home-authenticate.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { RegisterOngComponent } from './components/register-ong/register-ong.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
@@ -17,13 +18,15 @@ import {ForgotSenhaEmailComponent} from './components/forgot-senha-email/forgot-
 import {ForgotSenhaNovaSenhaComponent} from './components/forgot-senha-nova-senha/forgot-senha-nova-senha.component'
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home-principal' },
-  { path: 'home', component: HomeComponent },
-  { path: 'home-principal', component: HomePrincipalComponent },
+
+  { path: '', pathMatch: 'full', redirectTo: 'home-visitante' },
   { path: 'login', component: LogInComponent },
   { path: 'cadastro', component: RegisterSelectComponent },
   { path: 'cadastro-ong', component: RegisterOngComponent },
   { path: 'cadastro-user', component: RegisterUserComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home-principal', component: HomePrincipalComponent },
+  { path: 'home-visitante', component: HomeAuthenticateComponent },
   { path: 'cadastro-senha-user', component: RegisterSenhaComponent },
   { path: 'cadastro-senha-ong', component: RegisterSenhaOngComponent },
   { path: 'cadastro-dog', component: RegisterDogComponent },
