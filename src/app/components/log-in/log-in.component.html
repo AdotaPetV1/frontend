@@ -3,28 +3,28 @@
     <mat-card-header>
       <img class="logo" src="assets/image/logo2.png" mat-card-image style="max-width: 50%; max-height: 50%;">
     </mat-card-header>
-  <form class="form" [formGroup] = 'loginForm'>
-    <mat-card-content>
-      <mat-form-field class="field-full-width">
-        <mat-label>Email</mat-label>
-        <input matInput formCrontolName="Email" name="Email">
-      </mat-form-field>
-      <mat-form-field class="field-full-width">
-        <mat-label>Senha</mat-label>
-        <input matInput formCrontolName="Senha" name="Senha">
-      </mat-form-field>
-      <section class="login-section">
-        <mat-radio-group >
-          <mat-radio-button class="Login-margin" value="after" >Salvar senha</mat-radio-button>
-            <a style="margin: 0 15px"  href="/esqueceu-senha-email">Esqueceu sua Senha?</a>
-        </mat-radio-group>
-      </section>
-    </mat-card-content>
+    <form class="form" [formGroup]="loginForm">
+      <mat-card-content>
+        <mat-form-field class="field-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="Email" name="Email">
+        </mat-form-field>
+        <mat-form-field class="field-full-width">
+          <mat-label>Senha</mat-label>
+          <input matInput formControlName="Senha" name="Senha" type="password">
+        </mat-form-field>
+        <section class="login-section">
+          <mat-radio-group>
+            <mat-radio-button class="Login-margin" value="after">Salvar senha</mat-radio-button>
+            <a style="margin: 0 15px" href="/esqueceu-senha-email">Esqueceu sua Senha?</a>
+          </mat-radio-group>
+        </section>
+      </mat-card-content>
       <button mat-stroked-button color="basic" (click)='doLogin()' class="btn-block">Login</button>
-    <div>
-      <p>Não possui conta?
-      <a style="margin: 0 15px" href= "/cadastro">Criar Conta</a></p>
-    </div>
-  </form>
+      <div>
+        <p>Não possui conta?
+          <a style="margin: 0 15px" href="/cadastro">Criar Conta</a></p>
+      </div>
+    </form>
   </mat-card>
 </div>
