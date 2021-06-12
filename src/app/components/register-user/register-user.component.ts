@@ -80,7 +80,7 @@ export class RegisterUserComponent implements OnInit {
         text: 'Error: ' + ex.error.data.message
       });
       //redireciona para a tela de login 
-      this.router.navigate(['login'])
+      this.router.navigate(['cadastro-user'])
     });
     
   }

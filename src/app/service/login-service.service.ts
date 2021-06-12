@@ -50,4 +50,13 @@ export class LoginServiceService {
     );
   }
 
+  //service de registro de ongs
+  public DoOngRegister(user: any): Observable<ResponseModel>{
+    return this.httpClient.post<ResponseModel>(
+      this.apiUrl + '/ong',
+      user,
+      this.httpOptions,
+    );
+  }
+
 }
