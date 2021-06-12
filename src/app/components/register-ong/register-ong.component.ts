@@ -36,6 +36,9 @@ export class RegisterOngComponent implements OnInit {
       Facebook: [ '', [Validators.required]],
       Vakaquinha: [ '', [Validators.required]],
       Endereco: [ '', [Validators.required]],
+      Municipio: [ '', [Validators.required]],
+      CEP: [ '', [Validators.required]],
+      UF: [ '', [Validators.required]],
     })
   }
 
@@ -52,6 +55,10 @@ export class RegisterOngComponent implements OnInit {
       Facebook: this.ongRegisterForm.value.Facebook,
       Vakaquinha: this.ongRegisterForm.value.Vakaquinha,
       Endereco: this.ongRegisterForm.value.Endereco,
+      Municipio : this.ongRegisterForm.value.Municipio,
+      CEP: this.ongRegisterForm.value.CEP,
+      UF: this.ongRegisterForm.value.UF,
+      
 
     }
 
