@@ -1,6 +1,6 @@
 import UserModel from './UserModel';
 
-export default class ResponseModel{
+export default class UserResponseModel{
     data!: {
         userType: string;
         user: UserModel

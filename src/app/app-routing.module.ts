@@ -12,19 +12,21 @@ import { RegisterSenhaOngComponent } from './components/register-senha-ong/regis
 import { RegisterDogComponent } from './components/register-dog/register-dog.component';
 import { RegisterCatComponent } from './components/register-cat/register-cat.component';
 import { EditOngComponent } from './components/edit-ong/edit-ong.component';
+import { EditSelectComponent } from './components/edit-select/edit-select.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import {ForgotSenhaCodigoComponent} from './components/forgot-senha-codigo/forgot-senha-codigo.component'
 import {ForgotSenhaEmailComponent} from './components/forgot-senha-email/forgot-senha-email.component'
 import {ForgotSenhaNovaSenhaComponent} from './components/forgot-senha-nova-senha/forgot-senha-nova-senha.component'
+import { AuthGuard } from './components/auth.guard';
+
 
 const routes: Routes = [
-
-  { path: '', pathMatch: 'full', redirectTo: 'home-visitante' },
+  {path: '', component: HomeAuthenticateComponent, pathMatch:'full'},
   { path: 'login', component: LogInComponent },
-  { path: 'cadastro', component: RegisterSelectComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'cadastro-ong', component: RegisterOngComponent },
   { path: 'cadastro-user', component: RegisterUserComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'cadastro', component: RegisterSelectComponent },
   { path: 'home-principal', component: HomePrincipalComponent },
   { path: 'home-visitante', component: HomeAuthenticateComponent },
   { path: 'cadastro-senha-user', component: RegisterSenhaComponent },
@@ -33,6 +35,7 @@ const routes: Routes = [
   { path: 'cadastro-cat', component: RegisterCatComponent },
   { path: 'editar-ong', component: EditOngComponent },
   { path: 'editar-user', component: EditUserComponent },
+  { path: 'editar', component: EditSelectComponent },
   { path: 'esqueceu-senha-email', component: ForgotSenhaEmailComponent },
   { path: 'esqueceu-senha-codigo', component: ForgotSenhaCodigoComponent },
   { path: 'esqueceu-senha-nova-senha', component: ForgotSenhaNovaSenhaComponent },

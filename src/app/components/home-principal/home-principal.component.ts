@@ -18,6 +18,9 @@ export class HomePrincipalComponent implements OnInit {
   goToRegistertSelect(){
     this.router.navigate(['./cadastro']);
   }
+  goToEditSelect(){
+    this.router.navigate(['./editar']);
+  }
   
 
   

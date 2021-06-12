@@ -8,34 +8,46 @@
         Cadastro de Usuário
       </p>
     </div>
-  <form class="form">
+  <form class="form" [formGroup]="userRegisterForm">
   <mat-card-content>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="Nome">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="Nome" name="Nome">
       </mat-form-field>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="CPF">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="CPF" name="CPF">
       </mat-form-field>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="Email">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="Email" name="Email">
       </mat-form-field>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="Contato">
+        <mat-label>Senha</mat-label>
+        <input matInput formControlName="Senha" name="Senha">
       </mat-form-field>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="Endereço">
+        <mat-label>Contato</mat-label>
+        <input matInput formControlName="Numero" name="Numero">
       </mat-form-field>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="Cidade">
+        <mat-label>Endereço</mat-label>
+        <input matInput formControlName="Endereco" name="Endereco">
       </mat-form-field>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="UF">
+        <mat-label>Cidade</mat-label>
+        <input matInput formControlName="Municipio" name="Municipio">
       </mat-form-field>
       <mat-form-field class="field-full-width">
-        <input matInput placeholder="CEP">
+        <mat-label>UF</mat-label>
+        <input matInput formControlName="UF" name="UF">
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <mat-label>CEP</mat-label>
+        <input matInput formControlName="CEP" name="CEP">
       </mat-form-field>
   </mat-card-content>
-    <button mat-stroked-button color="basic" class="btn-block">Cadastrar</button>
+    <button mat-stroked-button color="basic" (click)='doUserRegister()' class="btn-block">Cadastrar</button>
   </form>
 </mat-card>
 </div>
