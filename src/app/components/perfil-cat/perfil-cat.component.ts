@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-perfil-cat',
   templateUrl: './perfil-cat.component.html',

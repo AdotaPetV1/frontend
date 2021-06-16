@@ -39,6 +39,7 @@ export class RegisterOngComponent implements OnInit {
       Municipio: [ '', [Validators.required]],
       CEP: [ '', [Validators.required]],
       UF: [ '', [Validators.required]],
+      CaixaPostal: [ '', [Validators.required]],
     })
   }
 
@@ -46,7 +47,7 @@ export class RegisterOngComponent implements OnInit {
 
     let ong = {
       Nome : this.ongRegisterForm.value.Nome,
-      CPF: this.ongRegisterForm.value.CPF,
+      CNPJ: this.ongRegisterForm.value.CNPJ,
       Email : this.ongRegisterForm.value.Email,
       Senha: this.ongRegisterForm.value.Senha,
       Numero : this.ongRegisterForm.value.Numero,
@@ -58,6 +59,7 @@ export class RegisterOngComponent implements OnInit {
       Municipio : this.ongRegisterForm.value.Municipio,
       CEP: this.ongRegisterForm.value.CEP,
       UF: this.ongRegisterForm.value.UF,
+      CaixaPostal: this.ongRegisterForm.value.CaixaPostal,
       
 
     }

@@ -18,4 +18,13 @@ export class HomeAuthenticateComponent implements OnInit {
   goToRegistertSelect(){
     this.router.navigate(['./cadastro']);
   }
+  goToHomeVisitante(){
+    this.router.navigate(['./home']);
+  }
+  goToPerfilCat(){
+    this.router.navigate(['./perfil-cat']);
+  }
+  goToPerfilDog(){
+    this.router.navigate(['./perfil-dog']);
+  }
 }

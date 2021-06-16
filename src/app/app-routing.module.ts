@@ -18,6 +18,9 @@ import {ForgotSenhaCodigoComponent} from './components/forgot-senha-codigo/forgo
 import {ForgotSenhaEmailComponent} from './components/forgot-senha-email/forgot-senha-email.component'
 import {ForgotSenhaNovaSenhaComponent} from './components/forgot-senha-nova-senha/forgot-senha-nova-senha.component'
 import { AuthGuard } from './components/auth.guard';
+import { PerfilCatComponent } from './components/perfil-cat/perfil-cat.component';
+import { PerfilDogComponent } from './components/perfil-dog/perfil-dog.component';
+import { RegisterPetSelectComponent } from './components/register-pet-select/register-pet-select.component';
 
 
 const routes: Routes = [
@@ -39,6 +42,11 @@ const routes: Routes = [
   { path: 'esqueceu-senha-email', component: ForgotSenhaEmailComponent },
   { path: 'esqueceu-senha-codigo', component: ForgotSenhaCodigoComponent },
   { path: 'esqueceu-senha-nova-senha', component: ForgotSenhaNovaSenhaComponent },
+  { path: 'perfil-cat', component: PerfilCatComponent },
+  { path: 'perfil-dog', component: PerfilDogComponent },
+  { path: 'cadastro-cat', component: RegisterCatComponent },
+  { path: 'cadastro-dog', component: RegisterDogComponent },
+  { path: 'cadastro-pet-select', component: RegisterPetSelectComponent },
 ];
 
 @NgModule({

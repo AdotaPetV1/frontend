@@ -35,6 +35,7 @@ import { HomePrincipalComponent } from './components/home-principal/home-princip
 import { HomeAuthenticateComponent } from './components/home-authenticate/home-authenticate.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditSelectComponent } from './components/edit-select/edit-select.component';
+import { RegisterPetSelectComponent } from './components/register-pet-select/register-pet-select.component';
 
 
 
@@ -60,7 +61,8 @@ import { EditSelectComponent } from './components/edit-select/edit-select.compon
     RegisterCatComponent,
     HomePrincipalComponent,
     HomeAuthenticateComponent,
-    EditSelectComponent
+    EditSelectComponent,
+    RegisterPetSelectComponent
   ],
   imports: [
     BrowserModule,
