@@ -21,6 +21,9 @@ import { AuthGuard } from './components/auth.guard';
 import { PerfilCatComponent } from './components/perfil-cat/perfil-cat.component';
 import { PerfilDogComponent } from './components/perfil-dog/perfil-dog.component';
 import { RegisterPetSelectComponent } from './components/register-pet-select/register-pet-select.component';
+import { EditPetSelectComponent } from './components/edit-pet-select/edit-pet-select.component';
+import { EditCatComponent } from './components/edit-cat/edit-cat.component';
+import { EditDogComponent } from './components/edit-dog/edit-dog.component';
 
 
 const routes: Routes = [
@@ -47,6 +50,11 @@ const routes: Routes = [
   { path: 'cadastro-cat', component: RegisterCatComponent },
   { path: 'cadastro-dog', component: RegisterDogComponent },
   { path: 'cadastro-pet-select', component: RegisterPetSelectComponent },
+  { path: 'editar-pet-select', component: EditPetSelectComponent },
+  { path: 'editar-cat', component: EditCatComponent },
+  { path: 'editar-dog', component: EditDogComponent },
+
+  
 ];
 
 @NgModule({

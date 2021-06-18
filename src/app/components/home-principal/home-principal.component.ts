@@ -24,6 +24,9 @@ export class HomePrincipalComponent implements OnInit {
   goToRegisterPetSelect(){
     this.router.navigate(['./cadastro-pet-select']);
   }
+  goToEditPetSelect(){
+    this.router.navigate(['./editar-pet-select']);
+  }
   
 
   

@@ -36,6 +36,9 @@ import { HomeAuthenticateComponent } from './components/home-authenticate/home-a
 import { HttpClientModule } from '@angular/common/http';
 import { EditSelectComponent } from './components/edit-select/edit-select.component';
 import { RegisterPetSelectComponent } from './components/register-pet-select/register-pet-select.component';
+import { EditPetSelectComponent } from './components/edit-pet-select/edit-pet-select.component';
+import { EditCatComponent } from './components/edit-cat/edit-cat.component';
+import { EditDogComponent } from './components/edit-dog/edit-dog.component';
 
 
 
@@ -62,7 +65,10 @@ import { RegisterPetSelectComponent } from './components/register-pet-select/reg
     HomePrincipalComponent,
     HomeAuthenticateComponent,
     EditSelectComponent,
-    RegisterPetSelectComponent
+    RegisterPetSelectComponent,
+    EditPetSelectComponent,
+    EditCatComponent,
+    EditDogComponent
   ],
   imports: [
     BrowserModule,
