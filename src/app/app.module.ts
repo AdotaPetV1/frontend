@@ -39,6 +39,9 @@ import { RegisterPetSelectComponent } from './components/register-pet-select/reg
 import { EditPetSelectComponent } from './components/edit-pet-select/edit-pet-select.component';
 import { EditCatComponent } from './components/edit-cat/edit-cat.component';
 import { EditDogComponent } from './components/edit-dog/edit-dog.component';
+import { PhotoGaleryDogsComponent } from './components/photo-galery-dogs/photo-galery-dogs.component';
+import { PhotoGaleryCatsComponent } from './components/photo-galery-cats/photo-galery-cats.component';
+import { ContributionsComponent } from './components/contributions/contributions.component';
 
 
 
@@ -68,7 +71,10 @@ import { EditDogComponent } from './components/edit-dog/edit-dog.component';
     RegisterPetSelectComponent,
     EditPetSelectComponent,
     EditCatComponent,
-    EditDogComponent
+    EditDogComponent,
+    PhotoGaleryDogsComponent,
+    PhotoGaleryCatsComponent,
+    ContributionsComponent
   ],
   imports: [
     BrowserModule,

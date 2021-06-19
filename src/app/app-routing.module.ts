@@ -24,6 +24,9 @@ import { RegisterPetSelectComponent } from './components/register-pet-select/reg
 import { EditPetSelectComponent } from './components/edit-pet-select/edit-pet-select.component';
 import { EditCatComponent } from './components/edit-cat/edit-cat.component';
 import { EditDogComponent } from './components/edit-dog/edit-dog.component';
+import { ContributionsComponent } from './components/contributions/contributions.component';
+import { PhotoGaleryDogsComponent } from './components/photo-galery-dogs/photo-galery-dogs.component';
+import { PhotoGaleryCatsComponent } from './components/photo-galery-cats/photo-galery-cats.component';
 
 
 const routes: Routes = [
@@ -53,6 +56,9 @@ const routes: Routes = [
   { path: 'editar-pet-select', component: EditPetSelectComponent },
   { path: 'editar-cat', component: EditCatComponent },
   { path: 'editar-dog', component: EditDogComponent },
+  { path: 'contribuicoes', component: ContributionsComponent },
+  { path: 'galeria-de-fotos-dogs', component: PhotoGaleryDogsComponent },
+  { path: 'galeria-de-fotos-cats', component: PhotoGaleryCatsComponent },
 
   
 ];
