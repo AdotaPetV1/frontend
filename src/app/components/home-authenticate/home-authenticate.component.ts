@@ -22,9 +22,12 @@ export class HomeAuthenticateComponent implements OnInit {
     this.router.navigate(['./home']);
   }
   goToPerfilCat(){
-    this.router.navigate(['./perfil-cat']);
+    this.router.navigate(['./galeria-de-fotos-cats']);
   }
   goToPerfilDog(){
-    this.router.navigate(['./perfil-dog']);
+    this.router.navigate(['./galeria-de-fotos-dogs']);
+  }
+  goToContribuicao(){
+    this.router.navigate(['./contribuicoes']);
   }
 }
