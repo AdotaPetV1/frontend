@@ -88,8 +88,7 @@ export class RegisterDogComponent implements OnInit {
         title: 'Erro!',
         text: 'Error: ' + ex.error.data.message
       });
-      //redireciona para a tela de login 
-      //this.router.navigate(['cadastro-dog'])
+
     });
     
   }
