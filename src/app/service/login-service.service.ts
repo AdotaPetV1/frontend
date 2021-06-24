@@ -11,7 +11,9 @@ import ResponseModel from '../model/ResponseModel';
 
 export class LoginServiceService {
 
-  constructor(private httpClient : HttpClient) {}
+  constructor(private httpClient : HttpClient) {
+    
+  }
 
   apiUrl = "http://localhost:8080/api/";
 
@@ -58,5 +60,37 @@ export class LoginServiceService {
       this.httpOptions,
     );
   }
+
+    //service de registro de animal
+  public DoAnimalRegister(animal: any): Observable<ResponseModel> {
+   return  this.httpClient.post<ResponseModel>(
+      this.apiUrl + '/animal',
+      animal,
+      this.httpOptions,
+    );
+  }
+
+  /*public DoUpdateDog(id:any ): Observable<ResponseModel>{
+    return this.httpClient.put<ResponseModel>(
+      this.apiUrl + '/animal',
+      id,
+      this.httpOptions,
+    );
+  }
+
+  public DoDeleteDog(id:any ): Observable<ResponseModel>{
+    return this.httpClient.delete<ResponseModel>(
+      this.apiUrl + '/animal/:ID',
+      id,
+      this.httpOptions,
+    );
+  }
+
+  public DoGetAllDog(dog: any, key: string){
+
+  }*/
+
+  
+
 
 }
