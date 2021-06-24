@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginServiceService } from 'src/app/service/login-service.service';
+import { StorageService } from 'src/app/service/utils/storage.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -14,10 +15,10 @@ export class LogInComponent implements OnInit {
 
 
   constructor(
-    public loginService:LoginServiceService,
-     private router: Router,
-     private fb: FormBuilder,
-     //private rest: LoginServiceService
+      public loginService:LoginServiceService,
+      private StorageService : StorageService,
+      private router: Router,
+      private fb: FormBuilder,
      ) {}
 
   ngOnInit(): void {
@@ -37,6 +38,10 @@ export class LogInComponent implements OnInit {
     this.loginService.DoLogin(user).subscribe(response =>{
       //Valida se ele trouxe um usuário com as informações passada
       if(response.data.user){
+
+        //Armazena o token no local storage
+        this.StorageService.set("token",response.data.token.toString());
+        
         //redireciona para a home completa
         this.router.navigate(['home-principal'])
         //Exemplo de utilização do Alert, mas aqui deve vir a lógica para trocar de página
@@ -64,8 +69,6 @@ export class LogInComponent implements OnInit {
         title: 'Erro!',
         text: 'Error: ' + ex.error.data.message
       });
-      //redireciona para a tela de login 
-      this.router.navigate(['login'])
     });
     
   }

@@ -61,15 +61,6 @@ export class LoginServiceService {
     );
   }
 
-    //service de registro de animal
-  public DoAnimalRegister(animal: any): Observable<ResponseModel> {
-   return  this.httpClient.post<ResponseModel>(
-      this.apiUrl + '/animal',
-      animal,
-      this.httpOptions,
-    );
-  }
-
   /*public DoUpdateDog(id:any ): Observable<ResponseModel>{
     return this.httpClient.put<ResponseModel>(
       this.apiUrl + '/animal',

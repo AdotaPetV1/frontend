@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { OngModel, ResponseListOng } from 'src/app/model/OngResponseModel';
+import { AnimalService } from 'src/app/service/animal.service';
 import { LoginServiceService } from 'src/app/service/login-service.service';
+import { OrganizacaoService  } from 'src/app/service/organizacao.service';
+
 import Swal from 'sweetalert2';
 
 @Component({
@@ -10,16 +14,22 @@ import Swal from 'sweetalert2';
   styleUrls: ['./register-dog.component.css']
 })
 export class RegisterDogComponent implements OnInit {
-  public animalRegisterForm! : FormGroup;
   
+  public animalRegisterForm! : FormGroup;
+  public listOng !: OngModel[];
+
   constructor(
     public loginService:LoginServiceService,
-     private router: Router,
-     private fb: FormBuilder,
-     private rest: LoginServiceService
-     ) {}
+    private router: Router,
+    private fb: FormBuilder,
+    private OrganizacaoService : OrganizacaoService,
+    private AnimalService : AnimalService
+  ) {}
 
   ngOnInit(): void {
+
+    this.getAllOng();
+
     this.animalRegisterForm = this.fb.group({
       TipoAnimal: [ '', [Validators.required]],
       Nome: [ '', [Validators.required]],
@@ -27,10 +37,11 @@ export class RegisterDogComponent implements OnInit {
       Porte: [ '', [Validators.required]],
       Idade: [ '', [Validators.required]],
       Sexo: [ '', [Validators.required]],
-      OrganizacaoNome: [ '', [Validators.required]],
-      Email: [ '', [Validators.required]],
+      IdOrgResponsavel: [ '', [Validators.required]],
       Descricao: [ '', [Validators.required]],
-    })
+    });
+
+
   }
 
  doAnimalRegister(){
@@ -42,13 +53,12 @@ export class RegisterDogComponent implements OnInit {
       Porte: this.animalRegisterForm.value.Porte,
       Idade : this.animalRegisterForm.value.Idade,
       Sexo: this.animalRegisterForm.value.Sexo,
-      OrganizacaoNome : this.animalRegisterForm.value.OrganizacaoNome,
-      Email: this.animalRegisterForm.value.Email,
+      IdOrgResponsavel : this.animalRegisterForm.value.IdOrgResponsavel,
       Descricao: this.animalRegisterForm.value.Descricao,
 
     }
-    
-    this.loginService.DoAnimalRegister(animal).subscribe(response =>{
+
+    this.AnimalService.DoAnimalRegister(animal).subscribe(response =>{
       //Valida se ele trouxe um usuário com as informações passada
       if(response.data){
         //redireciona para a home completa
@@ -84,5 +94,11 @@ export class RegisterDogComponent implements OnInit {
     
   }
 
+  getAllOng(){
+    this.OrganizacaoService.GetAllOngs().subscribe(response =>{
+      this.listOng = response.data;
+      console.log(this.listOng);
+    });
+  }
 }
 

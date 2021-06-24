@@ -13,7 +13,10 @@
         <mat-card-content>
           <mat-form-field class="field-register">
             <mat-label>Tipo Animal</mat-label>
-            <input matInput formControlName="TipoAnimal" name="TipoAnimal">
+            <select matNativeControl required formControlName="TipoAnimal" name="TipoAnimal">
+              <option value="C">Cachorro</option>n>
+              <option value="G">Gato</option>
+            </select>
           </mat-form-field>
           <mat-form-field class="field-register">
             <mat-label>Nome</mat-label>
@@ -25,7 +28,11 @@
           </mat-form-field>
           <mat-form-field class="field-register">
             <mat-label>Porte</mat-label>
-            <input matInput formControlName="Porte" name="Porte">
+            <select matNativeControl required formControlName="Porte" name="Porte">
+              <option value="Porte">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+            </select>
           </mat-form-field>
           <mat-form-field class="field-register">
             <mat-label>Idade</mat-label>
@@ -33,15 +40,18 @@
           </mat-form-field>
           <mat-form-field class="field-register">
             <mat-label>Sexo</mat-label>
-            <input matInput formControlName="Sexo" name="Sexo">
+            <select matNativeControl required formControlName="Sexo" name="Sexo">
+              <option value="M">Macho</option>
+              <option value="F">Fêmea</option>
+            </select>
           </mat-form-field>
           <mat-form-field class="field-register">
-            <mat-label>Organizacao Nome</mat-label>
-            <input matInput formControlName="OrganizacaoNome" name="OrganizacaoNome">
-          </mat-form-field>
-          <mat-form-field class="field-register">
-            <mat-label>Email</mat-label>
-            <input matInput formControlName="Email" name="Email">
+            <mat-label>Organização</mat-label>
+            <select matNativeControl formControlName="IdOrgResponsavel" name="IdOrgResponsavel">
+              <option *ngFor="let ong of listOng" value="{{ong.IdOrg}}">
+                {{ong.Nome}}
+              </option>
+            </select>
           </mat-form-field>
       </mat-card-content>   
     </form>
