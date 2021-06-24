@@ -21,11 +21,11 @@ export class HomePrincipalComponent implements OnInit {
   goToEditSelect(){
     this.router.navigate(['./editar']);
   }
-  goToRegisterPetSelect(){
-    this.router.navigate(['./cadastro-pet-select']);
+  goToRegisterPet(){
+    this.router.navigate(['./cadastro-dog']);
   }
-  goToEditPetSelect(){
-    this.router.navigate(['./editar-pet-select']);
+  goToEdit(){
+    this.router.navigate(['./editar-dog']);
   }
   
 

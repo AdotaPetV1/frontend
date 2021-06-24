@@ -10,7 +10,6 @@ import { RegisterSelectComponent } from './components/register-select/register-s
 import { RegisterSenhaComponent } from './components/register-senha/register-senha.component';
 import { RegisterSenhaOngComponent } from './components/register-senha-ong/register-senha-ong.component';
 import { RegisterDogComponent } from './components/register-dog/register-dog.component';
-import { RegisterCatComponent } from './components/register-cat/register-cat.component';
 import { EditOngComponent } from './components/edit-ong/edit-ong.component';
 import { EditSelectComponent } from './components/edit-select/edit-select.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
@@ -20,9 +19,6 @@ import {ForgotSenhaNovaSenhaComponent} from './components/forgot-senha-nova-senh
 import { AuthGuard } from './components/auth.guard';
 import { PerfilCatComponent } from './components/perfil-cat/perfil-cat.component';
 import { PerfilDogComponent } from './components/perfil-dog/perfil-dog.component';
-import { RegisterPetSelectComponent } from './components/register-pet-select/register-pet-select.component';
-import { EditPetSelectComponent } from './components/edit-pet-select/edit-pet-select.component';
-import { EditCatComponent } from './components/edit-cat/edit-cat.component';
 import { EditDogComponent } from './components/edit-dog/edit-dog.component';
 import { ContributionsComponent } from './components/contributions/contributions.component';
 import { PhotoGaleryDogsComponent } from './components/photo-galery-dogs/photo-galery-dogs.component';
@@ -41,7 +37,6 @@ const routes: Routes = [
   { path: 'cadastro-senha-user', component: RegisterSenhaComponent },
   { path: 'cadastro-senha-ong', component: RegisterSenhaOngComponent },
   { path: 'cadastro-dog', component: RegisterDogComponent },
-  { path: 'cadastro-cat', component: RegisterCatComponent },
   { path: 'editar-ong', component: EditOngComponent },
   { path: 'editar-user', component: EditUserComponent },
   { path: 'editar', component: EditSelectComponent },
@@ -50,11 +45,6 @@ const routes: Routes = [
   { path: 'esqueceu-senha-nova-senha', component: ForgotSenhaNovaSenhaComponent },
   { path: 'perfil-cat', component: PerfilCatComponent },
   { path: 'perfil-dog', component: PerfilDogComponent },
-  { path: 'cadastro-cat', component: RegisterCatComponent },
-  { path: 'cadastro-dog', component: RegisterDogComponent },
-  { path: 'cadastro-pet-select', component: RegisterPetSelectComponent },
-  { path: 'editar-pet-select', component: EditPetSelectComponent },
-  { path: 'editar-cat', component: EditCatComponent },
   { path: 'editar-dog', component: EditDogComponent },
   { path: 'contribuicoes', component: ContributionsComponent },
   { path: 'galeria-de-fotos-dogs', component: PhotoGaleryDogsComponent },

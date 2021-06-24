@@ -30,4 +30,12 @@ export class AnimalService {
          this.httpOptions,
        );
      }
+
+     public DoAnimalEdit(animal: any): Observable<ResponseModel> {
+      return  this.httpClient.put<ResponseModel>(
+         this.apiUrl + '/animal',
+         animal,
+         this.httpOptions,
+       );
+     }
 }
