@@ -38,6 +38,7 @@ import { EditDogComponent } from './components/edit-dog/edit-dog.component';
 import { PhotoGaleryDogsComponent } from './components/photo-galery-dogs/photo-galery-dogs.component';
 import { PhotoGaleryCatsComponent } from './components/photo-galery-cats/photo-galery-cats.component';
 import { ContributionsComponent } from './components/contributions/contributions.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 
@@ -66,7 +67,8 @@ import { ContributionsComponent } from './components/contributions/contributions
     EditDogComponent,
     PhotoGaleryDogsComponent,
     PhotoGaleryCatsComponent,
-    ContributionsComponent
+    ContributionsComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

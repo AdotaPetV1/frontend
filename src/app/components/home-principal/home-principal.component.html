@@ -21,53 +21,50 @@
     </mat-card-actions>
   </mat-card> 
   </mat-sidenav> 
-  <mat-sidenav-content class="sidenav-content">
-    <div>
-  <div class="home-title">
-      <mat-card-title>Adote agora e faça uma bolinha de pelo feliz</mat-card-title>
-  </div>
-    <mat-card class="home-principal-box-title">
-      <mat-card-title style="margin-left: 9%;">Adota Dog</mat-card-title>
-    </mat-card>
-    <mat-card class="home-principal-box">
-      <div fxLayout="row" fxLayoutAlign="start center" style="margin: 2%;" >
-        <div style="margin: 0.5%;">
-          <mat-card class="home-principal-grid"
-          fxFlex = "0 1 calc(25% - 11px)"
-          xFlex.1t-md= "0 1 calc(50% - 11px)"
-          xFlex.1t-sm = "100%">
-            <mat-card-header>
-              <div mat-card-avatar class="home-principal-image"></div>
-              <mat-card-title >Kamui</mat-card-title>
-            </mat-card-header>
-              <img mat-card-image src="https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg" alt="Photo of a Shiba Inu">
-            </mat-card>
-        </div>
-      </div>
-    </mat-card>
-  </div>
-  <div>
-    <mat-card class="home-principal-box-title">
-      <mat-card-title style="margin-left: 13%;">Adota Cat</mat-card-title>
-    </mat-card>
-    <mat-card class="home-principal-box">
-      <div fxLayout="row" fxLayoutAlign="start center" style="margin: 2%;" >
-        <div style="margin: 0.5%;">
-          <mat-card class="home-principal-grid"
-          fxFlex = "0 1 calc(25% - 11px)"
-          xFlex.1t-md= "0 1 calc(50% - 11px)"
-          xFlex.1t-sm = "100%">
-            <mat-card-header>
-              <div mat-card-avatar class="home-principal-image"></div>
-              <mat-card-title>Joca</mat-card-title>
-            </mat-card-header>
-              <img mat-card-image src="http://cdn.shopify.com/s/files/1/2059/0807/products/cat-sunglasses-1_1200x1200.jpg?v=1571438982" alt="Photo of a Shiba Inu">
+  <mat-tab-group mat-align-tabs='start' style=' padding-top:  5px; padding-left: 2%; padding-right: 2%;'>
+    <mat-tab label='Pets '>
+      <div class="home-title">
+        <mat-card-title>Adote agora e faça uma bolinha de pelo feliz</mat-card-title>
+    </div>
+      <div fxLayout="row wrap " fxLayoutAlign="start center" style=' padding: 2%;' >
+        <ng-container *ngFor='let animal of listAnimal' style='margin: 0.5%;'>
+  
+          <mat-card class="mat-card-animais"
+          fxFlex='0 1 calc(33.3% - 11px)'
+          fxFlex.lt-md='0 1 calc(50% - 11px)'
+          fxFlex.lt-sm='100%'>
+            <mat-card-title class="mat-card-title-live">
+              <div class="column">
+                <p style="font-size: 0.9rem;">
+                  <mat-label fxFlex='50' fxLayoutAlign='start center'></mat-label>
+                  <span fxFlex='30' fxLayoutAlign='start center' >{{animal.Nome}}</span>
+                  <span fxFlex></span>
+                </p>
+                <img mat-card-image class="mat-card-title-img" src="assets/image/dogpic.jpg" style="height: 10%;" alt="Photo of a Shiba Inu" fx >
+                <p  style="font-size: 0.9rem;">
+                <mat-label fxFlex='50'fxLayoutAlign='start center'>Ong:</mat-label>
+                  <span fxFlex='50' fxLayoutAlign='start center'>{{animal.OrganizacaoNome}}</span>
+                  <span fxFlex></span>
+                </p>
+                <p style="font-size: 0.9rem;">
+                  <mat-label fxFlex='50'fxLayoutAlign='start center'>Raça:</mat-label>
+                    <span fxFlex='30' fxLayoutAlign='start center'>{{animal.Raca}}</span>
+                    <span fxFlex></span>
+                </p>
+  
+              </div>
+              
+            </mat-card-title >
+    
+           
           </mat-card>
-        </div>
+  
+        </ng-container>
+  
       </div>
-    </mat-card>
-  </div>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
+    </mat-tab>
+    
+  
+  </mat-tab-group>
 </mat-sidenav-container>
 

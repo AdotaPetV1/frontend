@@ -23,6 +23,7 @@ import { EditDogComponent } from './components/edit-dog/edit-dog.component';
 import { ContributionsComponent } from './components/contributions/contributions.component';
 import { PhotoGaleryDogsComponent } from './components/photo-galery-dogs/photo-galery-dogs.component';
 import { PhotoGaleryCatsComponent } from './components/photo-galery-cats/photo-galery-cats.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: 'contribuicoes', component: ContributionsComponent },
   { path: 'galeria-de-fotos-dogs', component: PhotoGaleryDogsComponent },
   { path: 'galeria-de-fotos-cats', component: PhotoGaleryCatsComponent },
+  { path: 'detalhe', component: DetailComponent },
 
   
 ];
