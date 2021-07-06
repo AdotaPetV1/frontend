@@ -17,24 +17,26 @@
               </p>
               <p  style="font-size: 0.9rem;">
               <mat-label fxFlex='50'fxLayoutAlign='start center'>Ong:</mat-label>
-                <span fxFlex='30' fxLayoutAlign='start center'>{{animal.OrganizacaoNome}}</span>
+                <span fxFlex='40' fxLayoutAlign='start center'>{{animal.OrganizacaoNome}}</span>
                 <span fxFlex></span>
               </p>
-
+              <p  style="font-size: 0.9rem;">
+                <mat-label fxFlex='50'fxLayoutAlign='start center'>ID:</mat-label>
+                  <span fxFlex='30' fxLayoutAlign='start center'>{{animal.IdAnimal}}</span>
+                  <span fxFlex></span>
+                </p>
+                <p style="font-size: 0.9rem;">
+                  <mat-label fxFlex='50'fxLayoutAlign='start center'>Raça:</mat-label>
+                    <span fxFlex='30' fxLayoutAlign='start center'>{{animal.Raca}}</span>
+                    <span fxFlex></span>
+                </p>
             </div>
-            
           </mat-card-title >
           <img mat-card-image class="mat-card-title-img" src="assets/image/dogpic.jpg" style="height: 10%;" alt="Photo of a Shiba Inu" fx >
-          <mat-card-content>
-            <p>
-              <mat-label fxFlex='50'fxLayoutAlign='start center'>Raça:</mat-label>
-                <span fxFlex='30' fxLayoutAlign='start center'>{{animal.Raca}}</span>
-                <span fxFlex></span>
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>Editar</button>
-            <button mat-button>Delete</button>
+          
+          <mat-card-actions  style="margin-left: 34%; margin-bottom: 10px; ">
+            <button mat-button class="editar-button" (click)="goToEditPet()" >Editar</button>
+            <button mat-button  class="editar-button" (click)='onDelete()'>Delete</button>
           </mat-card-actions>
         </mat-card>
 

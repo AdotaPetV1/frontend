@@ -68,7 +68,7 @@ export class RegisterOngComponent implements OnInit {
       //Valida se ele trouxe um usuário com as informações passada
       if(response.data){
         //redireciona para a home completa
-        this.router.navigate(['home-principal'])
+        this.router.navigate(['login'])
         //Exemplo de utilização do Alert, mas aqui deve vir a lógica para trocar de página
         return Swal.fire({
           icon: 'success',

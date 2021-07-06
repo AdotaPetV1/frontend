@@ -25,22 +25,15 @@ export class AnimalService {
   };
 
     //service de registro de animal
-   public DoAnimalRegister(animal: any): Observable<ResponseModel> {
-      return  this.httpClient.post<ResponseModel>(
+   public DoAnimalRegister(animal: any): Observable<ResponseListAnimal> {
+      return  this.httpClient.post<ResponseListAnimal>(
          this.apiUrl + '/animal',
          animal,
          this.httpOptions,
        );
      }
 
-    /* public DoAnimalRegister(animal: any): Observable<ResponseModel> {
-      return  this.httpClient.post<ResponseModel>(
-         this.apiUrl ,
-        
-         this.httpOptions,
-       );
-     }*/
-
+  
      public DoAnimalEdit(animal: any): Observable<ResponseModel> {
       return  this.httpClient.put<ResponseModel>(
          this.apiUrl + '/animal',
@@ -48,10 +41,23 @@ export class AnimalService {
          this.httpOptions,
        );
      }
+     public DoAnimalDelete(id: number): Observable<ResponseListAnimal> {
+      return  this.httpClient.delete<ResponseListAnimal>(
+         this.apiUrl + '/animal/' +id,
+         this.httpOptions,
+         
+       );
+     }
+     public DoAnimalUpdate(animal: any): Observable<ResponseListAnimal> {
+      return  this.httpClient.put<ResponseListAnimal>(
+         this.apiUrl + '/animal',
+         animal,
+         this.httpOptions,
+         
+       );
+     }
 
-    /* public GetAllAnimal2(animal:any): Observable<ResponseListAnimal>{
-      return this.httpClient.get<ResponseListAnimal>(this.apiUrl + '/animal',animal, this.httpOptions);
-    }*/
+    
 
     public GetAllAnimal(uf: any ): Observable<ResponseListAnimal>{
       return this.httpClient.get<ResponseListAnimal>(

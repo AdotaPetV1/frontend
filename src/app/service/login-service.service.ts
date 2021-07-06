@@ -29,7 +29,7 @@ export class LoginServiceService {
   //Então se você tiver um outro response com outras informações é necessário criar um novo modelo.      
   public DoLogin(user: any): Observable<UserResponseModel>{
     return this.httpClient.post<UserResponseModel>(
-      this.apiUrl + 'auth/login',
+      this.apiUrl + '/auth/login',
       user,
       this.httpOptions,
     );

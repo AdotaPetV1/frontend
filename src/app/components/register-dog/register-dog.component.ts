@@ -59,10 +59,11 @@ export class RegisterDogComponent implements OnInit {
     }
 
     this.AnimalService.DoAnimalRegister(animal).subscribe(response =>{
+      
       //Valida se ele trouxe um usuário com as informações passada
-      if(response.data){
+      if(response){
         //redireciona para a home completa
-       // this.router.navigate(['cadastro-dog'])
+       this.router.navigate(['cadastro-dog'])
         //Exemplo de utilização do Alert, mas aqui deve vir a lógica para trocar de página
         return Swal.fire({
           icon: 'success',
