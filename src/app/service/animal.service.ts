@@ -41,9 +41,9 @@ export class AnimalService {
          this.httpOptions,
        );
      }
-     public DoAnimalDelete(id: number): Observable<ResponseListAnimal> {
+     public DoAnimalDelete(id: any): Observable<ResponseListAnimal> {
       return  this.httpClient.delete<ResponseListAnimal>(
-         this.apiUrl + '/animal/' +id,
+         this.apiUrl + '/animal/' + id,
          this.httpOptions,
          
        );

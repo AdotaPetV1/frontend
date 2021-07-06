@@ -13,6 +13,7 @@ import { LoginServiceService } from 'src/app/service/login-service.service';
 export class DetailComponent implements OnInit {
   public listAnimal!: AnimalModel[];
   
+  
 
   constructor(public AnimalService: AnimalService,
     public loginService:LoginServiceService,
@@ -37,7 +38,7 @@ export class DetailComponent implements OnInit {
   }
   onDelete(){
     
-    this.AnimalService.DoAnimalDelete(26).subscribe(response =>{
+    this.AnimalService.DoAnimalDelete(37).subscribe(response =>{
       this.listAnimal = response.data;
       console.log(this.listAnimal, );
       this.ngOnInit();
