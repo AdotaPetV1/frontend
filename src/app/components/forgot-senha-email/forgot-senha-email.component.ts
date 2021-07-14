@@ -36,6 +36,7 @@ export class ForgotSenhaEmailComponent implements OnInit {
 
     this.loginService.DoForgotPassword(user).subscribe(response =>{
       //Valida se ele trouxe um usuário com as informações passada
+      console.log(response)
       if(response.data){
         //redireciona para a home completa
         this.router.navigate(['esqueceu-senha-codigo'])
