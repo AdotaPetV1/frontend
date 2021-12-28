@@ -36,6 +36,7 @@ export class ForgotSenhaEmailComponent implements OnInit {
 
     this.loginService.DoForgotPassword(user).subscribe(response =>{
       //Valida se ele trouxe um usuário com as informações passada
+      console.log(response)
       if(response.data){
         //redireciona para a home completa
         this.router.navigate(['esqueceu-senha-codigo'])
@@ -43,7 +44,7 @@ export class ForgotSenhaEmailComponent implements OnInit {
         return Swal.fire({
           icon: 'success',
           title: 'Sucesso!',
-          text: "Usuário logado com sucesso!",
+          text: "Email enviado sucesso!",
           
         
         } );
@@ -53,7 +54,7 @@ export class ForgotSenhaEmailComponent implements OnInit {
         return Swal.fire({
           icon: 'error',
           title: 'Error!',
-          text: "Ocorreu um erro ao tentar realizar o login!"
+          text: "Ocorreu um erro ao tentar enviar o email!"
         });
         
       }

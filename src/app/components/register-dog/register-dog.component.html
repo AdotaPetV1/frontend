@@ -9,50 +9,73 @@
   
   <mat-grid-tile class="dados"  [colspan]=1 [rowspan]=2>
       <mat-card class="card2"  style="height: 100%; margin-top: 5%;">
-      <mat-card-content>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Nome">
-        </mat-form-field>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Porte">
-        </mat-form-field>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Idade">
-        </mat-form-field>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Sexo">
-        </mat-form-field>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Castração">
-        </mat-form-field>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Vacinação">
-        </mat-form-field>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Raça">
-        </mat-form-field>
-        <mat-form-field class="field-register">
-          <input matInput placeholder="Limitações">
-        </mat-form-field>
-    </mat-card-content>
+        <form class="form" [formGroup]="animalRegisterForm">
+        <mat-card-content>
+          <mat-form-field class="field-register">
+            <mat-label>Tipo Animal</mat-label>
+            <select matNativeControl required formControlName="TipoAnimal" name="TipoAnimal">
+              <option value="C">Cachorro</option>n>
+              <option value="G">Gato</option>
+            </select>
+          </mat-form-field>
+          <mat-form-field class="field-register">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="Nome" name="Nome">
+          </mat-form-field>
+          <mat-form-field class="field-register">
+            <mat-label>Raça</mat-label>
+            <input matInput formControlName="Raca" name="Raca">
+          </mat-form-field>
+          <mat-form-field class="field-register">
+            <mat-label>Porte</mat-label>
+            <select matNativeControl required formControlName="Porte" name="Porte">
+              <option value="Porte">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+            </select>
+          </mat-form-field>
+          <mat-form-field class="field-register">
+            <mat-label>Idade</mat-label>
+            <input matInput formControlName="Idade" name="Idade">
+          </mat-form-field>
+          <mat-form-field class="field-register">
+            <mat-label>Sexo</mat-label>
+            <select matNativeControl required formControlName="Sexo" name="Sexo">
+              <option value="M">Macho</option>
+              <option value="F">Fêmea</option>
+            </select>
+          </mat-form-field>
+          <mat-form-field class="field-register">
+            <mat-label>Organização</mat-label>
+            <select matNativeControl formControlName="IdOrgResponsavel" name="IdOrgResponsavel">
+              <option *ngFor="let ong of listOng" value="{{ong.IdOrg}}">
+                {{ong.Nome}}
+              </option>
+            </select>
+          </mat-form-field>
+      </mat-card-content>   
+    </form>
   </mat-card>
   </mat-grid-tile>
   <mat-grid-tile class="card3">
     <mat-card class="card3">
       <mat-form-field class="field-full-width" style = 'max-width: 100%' >
+        <form class="form" [formGroup]="animalRegisterForm">
         <mat-label >Descrição</mat-label>
         <textarea matInput
         cdkTextareaAutosize
         #autosize="cdkTextareaAutosize"
         cdkAutosizeMinRows="1"
-        cdkAutosizeMaxRows="15"> </textarea>
+        cdkAutosizeMaxRows="15"
+        formControlName="Descricao" name="Descricao"></textarea>
+      </form>
       </mat-form-field>
     </mat-card>
   </mat-grid-tile>
   </mat-grid-list>
   <div class="button">
     <div  >
-      <button mat-stroked-button color="basic" class="button1">Cadastrar</button>
+      <button mat-stroked-button color="basic" (click)='doAnimalRegister()' class="button1" >Cadastrar</button>
     </div>
   </div>
   </mat-card>

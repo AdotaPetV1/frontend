@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { AnimalModel } from 'src/app/model/AnimalResponseModel';
+import { AnimalService } from 'src/app/service/animal.service';
 
 @Component({
   selector: 'app-home-principal',
@@ -8,9 +10,13 @@ import {Router} from '@angular/router';
 })
 export class HomePrincipalComponent implements OnInit {
 
-  constructor(private router : Router) {}
+  public listAnimal!: AnimalModel[];
+
+  constructor(private router : Router,
+    public AnimalService: AnimalService,) {}
 
   ngOnInit(): void {
+    this.getAllAnimal();
   }
   goToLogin(){
     this.router.navigate(['./login']);
@@ -21,11 +27,19 @@ export class HomePrincipalComponent implements OnInit {
   goToEditSelect(){
     this.router.navigate(['./editar']);
   }
-  goToRegisterPetSelect(){
-    this.router.navigate(['./cadastro-pet-select']);
+  goToRegisterPet(){
+    this.router.navigate(['./cadastro-dog']);
   }
-  goToEditPetSelect(){
-    this.router.navigate(['./editar-pet-select']);
+  goToEdit(){
+    this.router.navigate(['./detalhe']);
+  }
+  getAllAnimal(){
+    let uf = { UF : 'MG' }
+
+    this.AnimalService.GetAllAnimal(uf).subscribe(response =>{
+      this.listAnimal = response.data;
+      console.log(this.listAnimal, );
+    });
   }
   
 

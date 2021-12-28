@@ -30,18 +30,15 @@ import { ForgotSenhaCodigoComponent } from './components/forgot-senha-codigo/for
 import { ForgotSenhaNovaSenhaComponent } from './components/forgot-senha-nova-senha/forgot-senha-nova-senha.component';
 import { RegisterSenhaOngComponent } from './components/register-senha-ong/register-senha-ong.component';
 import { RegisterDogComponent } from './components/register-dog/register-dog.component';
-import { RegisterCatComponent } from './components/register-cat/register-cat.component';
 import { HomePrincipalComponent } from './components/home-principal/home-principal.component';
 import { HomeAuthenticateComponent } from './components/home-authenticate/home-authenticate.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditSelectComponent } from './components/edit-select/edit-select.component';
-import { RegisterPetSelectComponent } from './components/register-pet-select/register-pet-select.component';
-import { EditPetSelectComponent } from './components/edit-pet-select/edit-pet-select.component';
-import { EditCatComponent } from './components/edit-cat/edit-cat.component';
 import { EditDogComponent } from './components/edit-dog/edit-dog.component';
 import { PhotoGaleryDogsComponent } from './components/photo-galery-dogs/photo-galery-dogs.component';
 import { PhotoGaleryCatsComponent } from './components/photo-galery-cats/photo-galery-cats.component';
 import { ContributionsComponent } from './components/contributions/contributions.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 
@@ -64,17 +61,14 @@ import { ContributionsComponent } from './components/contributions/contributions
     ForgotSenhaNovaSenhaComponent,
     RegisterSenhaOngComponent,
     RegisterDogComponent,
-    RegisterCatComponent,
     HomePrincipalComponent,
     HomeAuthenticateComponent,
     EditSelectComponent,
-    RegisterPetSelectComponent,
-    EditPetSelectComponent,
-    EditCatComponent,
     EditDogComponent,
     PhotoGaleryDogsComponent,
     PhotoGaleryCatsComponent,
-    ContributionsComponent
+    ContributionsComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

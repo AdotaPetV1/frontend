@@ -1,78 +1,50 @@
-<div class="wrapper" fxLayout="row" fxLayoutAlign="center center">
-    <mat-card class="photo-galery-fundo">
-        <body>
-            <main>
-              <h1 class="titulo">
-                <strong>Contribuições</strong>
-              </h1>
-              <div class="informations-ongs">
-                    <div class="ongscards">
-                        <img class="image-contribution" src="assets/image/ong1.png" alt="">
-                        <p class="p1"><strong>Salve os bichinhos</strong></p>
-                        <p class="p2">CNPJ:22.450.080/0744-99</p>
-                        <p class="p2">Redes sociais: @salveosbichinhos </p>
-                        <p class="p2">Telefone: (31)99236-6548</p>
-                        <p class="p2">E-mail: salveosbichinhos@yahoo.com.br</p>
-                        <p class="p2">Endereço: Rua dos planetários, 40 - Bairro Cameleiros </p>
-                        <p class="p2">Informações para depósito/transferência: </p>
-                        <p class="p2">Banco: Santander</p>
-                        <p class="p2">Agencia: 4506</p>
-                        <p class="p2">Conta:05073425-9</p>
-                    </div>
-                    <div class="ongscards">
-                        <img class="image-contribution" src="assets/image/ong2.png" alt="">
-                        <p class="p1"><strong>Pro Pac</strong></p>
-                        <p class="p2">CNPJ: 223.841.996/8467-00</p>
-                        <p class="p2">Redes sociais: @propac </p>
-                        <p class="p2">Telefone: (31)99678-4378</p>
-                        <p class="p2">E-mail: propacong@outlook.com</p>
-                        <p class="p2">Endereço: Rua mangueiras, 350 - Bairro samambaias </p>
-                        <p class="p2">Informações para depósito/transferência: </p>
-                        <p class="p2">Banco: Itau</p>
-                        <p class="p2">Agencia: 2453</p>
-                        <p class="p2">Conta: 09087658-5</p>
-                    </div>
-                    <div class="ongscards">
-                        <img class="image-contribution" src="assets/image/ong3.png" alt="">
-                        <p class="p1"><strong>S.O.S Animais Abandonados</strong></p>
-                        <p class="p2">CNPJ: 654.899.576/2322-99</p>
-                        <p class="p2">Redes sociais: @sosanimaisabandonados </p>
-                        <p class="p2">Telefone: (31)99764-3077</p>
-                        <p class="p2">E-mail: sosanimaisabandonados@gmail.com.</p>
-                        <p class="p2">Endereço: Rua das capivaras, 1270 - Bairro Planópolis </p>
-                        <p class="p2">Informações para depósito/transferência: </p>
-                        <p class="p2">Banco:Banco do Brasil</p>
-                        <p class="p2">Agencia:37250</p>
-                        <p class="p2">Conta:84675560-2</p>
-                    </div>
-                    <div class="ongscards">
-                        <img class="image-contribution" src="assets/image/ong4.png" alt="">
-                        <p class="p1"><strong>Ong Animal</strong></p>
-                        <p class="p2">CNPJ: 455.678.433/2345-00</p>
-                        <p class="p2">Redes sociais: @onganimal </p>
-                        <p class="p2">Telefone: (31)99340-5688</p>
-                        <p class="p2">E-mail: onganimal@hotmal.com.br</p>
-                        <p class="p2">Endereço: Rua Eugênio Palhares, 25 - Bairro das letras </p>
-                        <p class="p2">Informações para depósito/transferência: </p>
-                        <p class="p2">Banco:Inter</p>
-                        <p class="p2">Agencia:0001</p>
-                        <p class="p2">Conta:00234534-2</p>
-                    </div>
-                    <div class="ongscards">
-                        <img class="image-contribution" src="assets/image/ong5.png" alt="">
-                        <p class="p1"><strong>MIAUAU</strong></p>
-                        <p class="p2">CNPJ: 876.456.344/2332-87</p>
-                        <p class="p2">Redes sociais: @miauau </p>
-                        <p class="p2">Telefone: (31)99879-3506</p>
-                        <p class="p2">E-mail: miauau@yahoo.com.br</p>
-                        <p class="p2">Endereço: Rua das Asaleas, 200 - Bairro das flores </p>
-                        <p class="p2">Informações para depósito/transferência: </p>
-                        <p class="p2">Banco: Nubank</p>
-                        <p class="p2">Agencia: 0001</p>
-                        <p class="p2">Conta: 01023456-9</p>
-                    </div>
-                </div>
-            </main>
-        </body>      
-    </mat-card>
-</div>
+<mat-tab-group mat-align-tabs='start' style=' padding-top:  5px; padding-left: 2%; padding-right: 2%;'>
+    <mat-tab label='Pets '>
+        <mat-card-title style=' padding-top:  70px; margin-left: 37%;'> Escolha uma ong cadastrada e entre em contato</mat-card-title>
+      <div fxLayout="row wrap" fxLayoutAlign="start center" style=' padding: 2%;' >
+        <ng-container *ngFor='let ong of listOng' style='margin: 0.5%;'>
+  
+          <mat-card class="mat-card-animais"
+          fxFlex='0 1 calc(33.3% - 11px)'
+          fxFlex.lt-md='0 1 calc(50% - 11px)'
+          fxFlex.lt-sm='100%'>
+            <mat-card-title class="mat-card-title-live">
+              <div class="column">
+                <img mat-card-image class="mat-card-title-img" src="assets/image/logoong.png" style="height: 10%;" alt="Photo of a Shiba Inu" fx >
+                <p style="font-size: 0.9rem;">
+                  <mat-label fxFlex='50' fxLayoutAlign='start center'>Nome Ong:</mat-label>
+                  <span fxFlex='30' fxLayoutAlign='start center' >{{ong.Nome}}</span>
+                  <span fxFlex></span>
+                </p>
+                <p  style="font-size: 0.9rem;">
+                <mat-label fxFlex='50'fxLayoutAlign='start center'>Email:</mat-label>
+                  <span fxFlex='30' fxLayoutAlign='start center'>{{ong.Email}}</span>
+                  <span fxFlex></span>
+                </p>
+                <p  style="font-size: 0.9rem;">
+                    <mat-label fxFlex='50'fxLayoutAlign='start center'>Site:</mat-label>
+                      <span fxFlex='30' fxLayoutAlign='start center'>{{ong.Site}}</span>
+                      <span fxFlex></span>
+                </p>
+                <p  style="font-size: 0.9rem;">
+                     <mat-label fxFlex='50'fxLayoutAlign='start center'>Instagram:</mat-label>
+                        <span fxFlex='30' fxLayoutAlign='start center'>{{ong.Instagram}}</span>
+                        <span fxFlex></span>
+                </p>
+                <p  style="font-size: 0.9rem;">
+                    <mat-label fxFlex='50'fxLayoutAlign='start center'>Telefone para Contato:</mat-label>
+                         <span fxFlex='30' fxLayoutAlign='start center'>{{ong.Numero}}</span>
+                        <span fxFlex></span>
+                </p>
+                <p style="font-size: 0.9rem;">
+                        <mat-label fxFlex='50'fxLayoutAlign='start center'>Vakaquinha:</mat-label>
+                            <span fxFlex='30' fxLayoutAlign='start center'>{{ong.Vakaquinha}}</span>
+                            <span fxFlex></span>
+                </p>
+            </div>
+                </mat-card-title >     
+                </mat-card>
+            </ng-container>
+        </div>
+    </mat-tab>
+</mat-tab-group>
